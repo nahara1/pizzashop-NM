@@ -39,7 +39,7 @@ public class Main {
 
         char userAction;
 
-        final String PROMPT_ACTION = "Add 'C'ustomer, List 'M'enu, Add 'O'rder, List 'T'ransaction or 'E'xit: ";
+        final String PROMPT_ACTION = "Add 'C'ustomer, 'P'rint Customers, List 'M'enu, Add 'O'rder, List 'T'ransaction or 'E'xit: ";
 
 
         MenuItem menu1 = new MenuItem(1, "Plain", 11.99);
@@ -60,7 +60,7 @@ public class Main {
                     break;
 
                 case CUST_PRNT :
-                    System.out.printf("%-10s | %-12s\n", "Customer Name ", "Phone Number");
+                    System.out.printf("%-10s | %-10s\n", "Name ", "Phone Number");
                     Customer.printCustomer(cList);
                     break;
 
