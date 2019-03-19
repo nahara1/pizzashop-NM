@@ -153,6 +153,12 @@ public class Main {
 
         return cust;
     }
+    // add order method
+    public Order addOrder() {
+        Order or = new Order (cCount++);
+        return or;
+    }
+
 
  }
 

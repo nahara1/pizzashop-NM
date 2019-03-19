@@ -23,7 +23,8 @@ public class Order {
     private double totalPrice;
 
     //Constructor Method
-    public Order() {
+    public Order(int _orderId) {
+        this.orderId = _orderId;
     }
 
     public Order(int _orderId, double _totalPrice) {
