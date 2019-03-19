@@ -28,9 +28,9 @@ public class Customer {
 
     //Constructor
 
-    public Customer(){
+    public Customer(int _customerId) {
+        this.customerId = _customerId;
     }
-
     public Customer(int _customerId, String name, String phoneNumber) {
         this.customerId = _customerId;
         this.custName  = name;

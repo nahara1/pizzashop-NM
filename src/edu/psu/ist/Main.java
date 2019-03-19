@@ -15,10 +15,11 @@ import java.util.*;
 public class Main {
     private String customerName;
     private String customerPhoneNumber;
-
+    int cCount = 1;
     public static void main(String[] args) {
 
         Main main = new Main();
+
 
         ArrayList<Customer> cList = new ArrayList<>();
         ArrayList<MenuItem> mList = new ArrayList<>();
@@ -142,7 +143,7 @@ public class Main {
     }
 
     public Customer addCustomer(){
-        Customer cust = new Customer();
+        Customer cust = new Customer(cCount++);
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please Enter your Name: ");
         cust.setCustomerName(scnr.nextLine());
