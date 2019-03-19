@@ -26,6 +26,8 @@ public class Order {
     public Order(int _orderId) {
         this.orderId = _orderId;
     }
+    public Order() {
+    }
 
     public Order(int _orderId, double _totalPrice) {
         this.orderId = _orderId;
