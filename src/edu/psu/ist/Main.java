@@ -16,10 +16,16 @@ public class Main {
     private String customerName;
     private String customerPhoneNumber;
     int cCount = 1;
+
+
     public static void main(String[] args) {
 
         Main main = new Main();
 
+        // Customer obj
+        Customer cust = new Customer();
+        // Customer obj
+        Order or = new Order();
 
         ArrayList<Customer> cList = new ArrayList<>();
         ArrayList<MenuItem> mList = new ArrayList<>();
@@ -51,28 +57,31 @@ public class Main {
         userAction = getAction(PROMPT_ACTION);
 
         while (userAction != EXIT_CODE) {
-            switch(userAction) {
-                case CUST_CODE :
-                    cList.add(main.addCustomer());
+            switch (userAction) {
+                case CUST_CODE:
+                    cList.add(cust.addCustomer());
 
                     break;
-                case MENU_CODE : MenuItem.listMenu(mList);
+                case MENU_CODE:
+                    MenuItem.listMenu(mList);
                     break;
 
-                case CUST_PRNT :
-                    System.out.printf("%-10s | %-10s\n", "Name ", "Phone Number");
+                case CUST_PRNT:
+                    System.out.printf("%-10s | %-12s | %-10s\n", "ID", "Name", "Phone Number");
                     Customer.printCustomer(cList);
                     break;
 
-                    // clean it up
-                case ORDER_CODE : //addOrders();
+                // clean it up
+                case ORDER_CODE: //addOrders();
                     // add loop to prompt user to order more items
                     String userInput = "Type 'Y'es to order or type 'N'o to go back to the main menu: ";
                     userAction = getAction(userInput);
                     while (userAction != 'N') {
                         MenuItem.listMenu(mList);
+                        //oList.add(main.addOrder());
                         Order o1 = new Order();
                         o1.getorderId();
+                        oList.add(main.addOrder());
                         //get input menu id
                         Scanner input = new Scanner(System.in);
                         System.out.println("Enter menu item id: ");
@@ -111,12 +120,12 @@ public class Main {
 
                     //print order
                     break;
-                case TRAN_CODE : //listTransactions();
- //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
+                case TRAN_CODE: //listTransactions();
+                    //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
                     Transaction trans1 = new Transaction(1);
                     tList.add(trans1);
                     System.out.println("Your order total is: $ " + orderTotal);
-                   // trans1.selectPayType();
+                    // trans1.selectPayType();
                     trans1.setPaymentType(trans1.selectPayType());
 
                     System.out.println("Receipt: ");
@@ -125,7 +134,7 @@ public class Main {
 
 
                     break;
-                case HELP_CODE : //
+                case HELP_CODE: //
                     break;
             }
 
@@ -141,8 +150,8 @@ public class Main {
         char firstChar = answer.charAt(0);
         return firstChar;
     }
-
-    public Customer addCustomer(){
+/*
+    public Customer addCustomer() {
         Customer cust = new Customer(cCount++);
         Scanner scnr = new Scanner(System.in);
         System.out.println("Please Enter your Name: ");
@@ -153,13 +162,16 @@ public class Main {
 
         return cust;
     }
-    /* add order method
+*/
+    // add order method
+
     public Order addOrder() {
-        Order or = new Order (cCount++);
+        Order or = new Order(cCount++);
+
         return or;
     }
-    */
 
 
- }
+
+}
 

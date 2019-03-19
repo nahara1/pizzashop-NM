@@ -21,6 +21,7 @@ public class Order {
     private MenuItem menu;
     private int custID, quantity;
     private double totalPrice;
+    int cCount = 0;
 
     //Constructor Method
     public Order(int _orderId) {
@@ -34,7 +35,11 @@ public class Order {
         this.price = _totalPrice;
 
     }
-
+    /*
+    public Order setOrderItems() {
+        return or;
+    }
+*/
 
     public int getOrder (){
         return orderId;
@@ -75,6 +80,20 @@ public class Order {
         double subTotal = _price * quantity;
         totalPrice += subTotal;
         return subTotal;
+    }
+
+
+    // Finish this method to generate order id for each new order
+    public Order order() {
+        Order or = new Order(cCount++);
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Enter Menu ID: ");
+        //or.setOrder(scnr.nextLine());
+        cust.setCustomerPhone(scnr.nextLine());
+        or.setorderId(cCount);
+
+
+        return or;
     }
 
 

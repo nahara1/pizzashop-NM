@@ -15,14 +15,32 @@ public class Customer {
     //Class Level Variables - Protect the data
     private int customerId;
     protected String custName, custPhone;
+    int cCount = 0;
+
+
+    // add new customer method
+
+    public Customer addCustomer() {
+        Customer cust = new Customer(cCount++);
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Please Enter your Name: ");
+        cust.setCustomerName(scnr.nextLine());
+        System.out.println("Please Enter your Phone: ");
+        cust.setCustomerPhone(scnr.nextLine());
+        cust.setCustomerId(cCount);
+
+
+        return cust;
+    }
 
 
     public static void printCustomer(ArrayList<Customer> cList){
         for (Customer cust: cList){
             //System.out.println("Customer Id: " + cust.getCustomerId());
-            System.out.printf("%-10s | %-12s\n", cust.getCustomerName(), cust.getCustomerPhone());
+            System.out.printf("%-10s | %-12s | %-10s\n", cust.getCustomerId(), cust.getCustomerName(), cust.getCustomerPhone());
         //    System.out.println("Customer Name: " + cust.getCustomerName());
         //    System.out.println("Customer Phone: " + cust.getCustomerPhone());
+
         }
     }
 
@@ -31,11 +49,14 @@ public class Customer {
     public Customer(int _customerId) {
         this.customerId = _customerId;
     }
+    public Customer() {
+    }
     public Customer(int _customerId, String name, String phoneNumber) {
         this.customerId = _customerId;
         this.custName  = name;
         this.custPhone = phoneNumber;
     }
+
 
     public void setCustomer(int _customerId, String name, String phoneNumber) {
         this.customerId = _customerId;
