@@ -79,7 +79,9 @@ public class Transaction {
     public void setPaymentType(PaymentType _payment) {this.payment = _payment;}
 
     public void printReceipt(double _total, PaymentType _payment) {
-        System.out.printf("%-10s _ %-10s\n", "Order         ", "$ " + _total);
+        System.out.printf("%-10s _ %-10s", "Order         ", "$ ");
+        System.out.printf("%.2f\n", _total);
+
         double total = _total + _total*tax;
 
         System.out.printf("%-10s _ %-10s", "Tax           ", "$ ");

@@ -12,7 +12,7 @@ package edu.psu.ist;
 
 import java.util.*;
 
-enum size {small, medium, large}
+enum Size {small, medium, large}
 
 public class MenuItem {
 
@@ -74,15 +74,16 @@ public class MenuItem {
     //add method to change menuItem price depending on the size
 
     public static void listMenu(ArrayList<MenuItem> mList) {
-        for (MenuItem menu : mList) {
-            System.out.println(menu.getmenuItem());
+        for (MenuItem menuitem : mList) {
+            System.out.println(menuitem.getmenuItem());
         }
     }
 
-    public void printMenuInfo() {
-        System.out.printf("%-10s | %-12s\n", " ", "Price");
+    public MenuItem printMenuInfo() {
+
         //System.out.print("-------------------------\n");​
-        System.out.printf("%-10s | %-12s\n", itemName, price);
+        System.out.printf("%-1s | %-12s | %-12s\n", menuId, itemName, "$" + price);
+        return null;
 
     }
 

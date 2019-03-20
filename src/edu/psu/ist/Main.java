@@ -53,6 +53,12 @@ public class Main {
         MenuItem menu3 = new MenuItem(3, "Extra", 13.99);
         MenuItem menu4 = new MenuItem(4, "Veg", 12.99);
 
+        mList.add(menu1);
+        mList.add(menu2);
+        mList.add(menu3);
+        mList.add(menu4);
+
+
         // prompt user
         userAction = getAction(PROMPT_ACTION);
 
@@ -63,7 +69,13 @@ public class Main {
 
                     break;
                 case MENU_CODE:
-                    MenuItem.listMenu(mList);
+                    //MenuItem.listMenu(mList);
+                   // System.out.printf("%-1s | %-12s | %-12s\n", " ", "Item  ", "Price");
+                    System.out.println("Pizza Menu");
+                    menu1.printMenuInfo();
+                    menu2.printMenuInfo();
+                    menu3.printMenuInfo();
+                    menu4.printMenuInfo();
                     break;
 
                 case CUST_PRNT:
@@ -77,13 +89,16 @@ public class Main {
                     String userInput = "Type 'Y'es to order or type 'N'o to go back to the main menu: ";
                     userAction = getAction(userInput);
                     while (userAction != 'N') {
-                        MenuItem.listMenu(mList);
                         //oList.add(main.addOrder());
                         Order o1 = new Order();
                         o1.getorderId();
                         oList.add(main.addOrder());
                         //get input menu id
                         Scanner input = new Scanner(System.in);
+                        menu1.printMenuInfo();
+                        menu2.printMenuInfo();
+                        menu3.printMenuInfo();
+                        menu4.printMenuInfo();
                         System.out.println("Enter menu item id: ");
                         int menuId = input.nextInt();
                         System.out.println("Enter quantity: ");
@@ -115,6 +130,7 @@ public class Main {
                                 userAction = getAction(userInput);
                                 break;
                         }
+
                     }
 
 
@@ -173,5 +189,7 @@ public class Main {
 
 
 
-}
+       }
+
+
 
