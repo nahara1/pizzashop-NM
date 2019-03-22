@@ -99,6 +99,11 @@ public class Main {
                         menu2.printMenuInfo();
                         menu3.printMenuInfo();
                         menu4.printMenuInfo();
+                        //
+
+                        //using order() method
+                        oList.add(or.order());
+
                         System.out.println("Enter menu item id: ");
                         int menuId = input.nextInt();
                         System.out.println("Enter quantity: ");

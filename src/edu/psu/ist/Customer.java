@@ -30,6 +30,8 @@ public class Customer {
         cust.setCustomerId(cCount);
 
 
+
+
         return cust;
     }
 
@@ -41,6 +43,12 @@ public class Customer {
         //    System.out.println("Customer Name: " + cust.getCustomerName());
         //    System.out.println("Customer Phone: " + cust.getCustomerPhone());
 
+            // index of each object
+            System.out.println("Index: " + cList.indexOf(cust));
+
+            // use this to count inventory
+            System.out.println("Array List Size: " + cList.size());
+
         }
     }
 
@@ -50,11 +58,6 @@ public class Customer {
         this.customerId = _customerId;
     }
     public Customer() {
-    }
-    public Customer(int _customerId, String name, String phoneNumber) {
-        this.customerId = _customerId;
-        this.custName  = name;
-        this.custPhone = phoneNumber;
     }
 
 

@@ -22,6 +22,8 @@ public class Order {
     private int custID, quantity;
     private double totalPrice;
     int cCount = 0;
+    double subTotal;
+    double orderTotal = 0;
 
     //Constructor Method
     public Order(int _orderId) {
@@ -89,7 +91,6 @@ public class Order {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Enter Menu ID: ");
         //or.setOrder(scnr.nextLine());
-        cust.setCustomerPhone(scnr.nextLine());
         or.setorderId(cCount);
 
 
