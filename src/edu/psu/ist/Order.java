@@ -93,13 +93,13 @@ public class Order {
     // Finish this method to generate order id for each new order
     public Order order() {
         Order or = new Order(cCount++);
-        Scanner scnr = new Scanner(System.in);
+       /* Scanner scnr = new Scanner(System.in);
         System.out.println("Enter Menu ID: ");
         menuID = scnr.nextInt();
         or.setorderId(cCount);
         System.out.println("Enter quantity: ");
         int qty = or.getQuantity();
-
+        */
         return or;
     }
 
