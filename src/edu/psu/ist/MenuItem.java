@@ -76,6 +76,7 @@ public class MenuItem {
     public static void listMenu(ArrayList<MenuItem> mList) {
         for (MenuItem menuitem : mList) {
             System.out.println(menuitem.getmenuItem());
+
         }
     }
 

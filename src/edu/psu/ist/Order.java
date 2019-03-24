@@ -16,7 +16,7 @@ import java.util.*;
 public class Order {
     private double price;
     //Class Level Variables - Protect the data
-    private int orderId;
+    private int orderId, menuID;
     private Customer cust;
     private MenuItem menu;
     private int custID, quantity;
@@ -62,6 +62,11 @@ public class Order {
 
     }
 
+    public void getSubTo(double subTotal) {
+        System.out.println("$ " + subTotal);
+        orderTotal += subTotal;
+    }
+
     //Setters and Getters
     public int getorderId() {
         return orderId;
@@ -90,12 +95,19 @@ public class Order {
         Order or = new Order(cCount++);
         Scanner scnr = new Scanner(System.in);
         System.out.println("Enter Menu ID: ");
-        //or.setOrder(scnr.nextLine());
+        menuID = scnr.nextInt();
         or.setorderId(cCount);
-
+        System.out.println("Enter quantity: ");
+        int qty = or.getQuantity();
 
         return or;
     }
+
+    public int getID (int _menuID) {
+        return menuID;
+
+    }
+
 
 
 

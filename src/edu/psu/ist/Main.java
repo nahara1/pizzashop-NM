@@ -26,6 +26,8 @@ public class Main {
         Customer cust = new Customer();
         // Customer obj
         Order or = new Order();
+        // Transaction obj
+        Transaction trans = new Transaction();
 
         ArrayList<Customer> cList = new ArrayList<>();
         ArrayList<MenuItem> mList = new ArrayList<>();
@@ -71,7 +73,8 @@ public class Main {
                 case MENU_CODE:
                     //MenuItem.listMenu(mList);
                    // System.out.printf("%-1s | %-12s | %-12s\n", " ", "Item  ", "Price");
-                    System.out.println("Pizza Menu");
+                    System.out.println("Pizza Shop Menu");
+                    //MenuItem.listMenu(mList);
                     menu1.printMenuInfo();
                     menu2.printMenuInfo();
                     menu3.printMenuInfo();
@@ -90,48 +93,50 @@ public class Main {
                     userAction = getAction(userInput);
                     while (userAction != 'N') {
                         //oList.add(main.addOrder());
-                        Order o1 = new Order();
+
+                        /*Order o1 = new Order();
                         o1.getorderId();
                         oList.add(main.addOrder());
+                        */
+
                         //get input menu id
                         Scanner input = new Scanner(System.in);
                         menu1.printMenuInfo();
                         menu2.printMenuInfo();
                         menu3.printMenuInfo();
                         menu4.printMenuInfo();
-                        //
+
 
                         //using order() method
-                        oList.add(or.order());
+                        //or.order();
+
 
                         System.out.println("Enter menu item id: ");
                         int menuId = input.nextInt();
                         System.out.println("Enter quantity: ");
-                        int qty = o1.getQuantity();
+                        int qty = or.getQuantity();
+
+                        oList.add(or.order());
+
                         switch (menuId) {
                             case 1:
-                                subTotal = o1.getSubTotal(menu1.getPrice(1), qty);
-                                System.out.println("$ " + subTotal);
-                                orderTotal += subTotal;
-                                //o1.printOrder(subTotal, menu1.getPrice(1), qty, menu1.getmenuItem());
+                                subTotal = or.getSubTotal(menu1.getPrice(1), qty);
+                                or.getSubTo(subTotal);
                                 userAction = getAction(userInput);
                                 break;
                             case 2:
-                                subTotal = o1.getSubTotal(menu2.getPrice(2), qty);
-                                System.out.println("$ " + subTotal);
-                                orderTotal += subTotal;
+                                subTotal = or.getSubTotal(menu2.getPrice(2), qty);
+                                or.getSubTo(subTotal);
                                 userAction = getAction(userInput);
                                 break;
                             case 3:
-                                subTotal = o1.getSubTotal(menu3.getPrice(3), qty);
-                                System.out.println("$ " + subTotal);
-                                orderTotal += subTotal;
+                                subTotal = or.getSubTotal(menu3.getPrice(3), qty);
+                                or.getSubTo(subTotal);
                                 userAction = getAction(userInput);
                                 break;
                             case 4:
-                                subTotal = o1.getSubTotal(menu4.getPrice(4), qty);
-                                System.out.println("$ " + subTotal);
-                                orderTotal += subTotal;
+                                subTotal = or.getSubTotal(menu4.getPrice(4), qty);
+                                or.getSubTo(subTotal);
                                 userAction = getAction(userInput);
                                 break;
                         }
@@ -184,17 +189,11 @@ public class Main {
         return cust;
     }
 */
-    // add order method
-
-    public Order addOrder() {
-        Order or = new Order(cCount++);
-
-        return or;
-    }
 
 
 
-       }
+
+}
 
 
 
