@@ -77,6 +77,7 @@ public class MenuItem {
         for (MenuItem menuitem : mList) {
             System.out.println(menuitem.getmenuItem());
 
+
         }
     }
 

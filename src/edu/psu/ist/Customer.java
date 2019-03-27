@@ -79,12 +79,18 @@ public class Customer {
     public void setCustomerId(int _customerId) {this.customerId = _customerId;}
 
     public String getCustomerName() { return custName; }
+    public String getCustomerName(int _id) { this.customerId = _id; return custName; }
     public void setCustomerName(String _customerName) {this.custName = _customerName;}
 
     public String getCustomerPhone() { return custPhone; }
     public void setCustomerPhone(String _customerPhone) {this.custPhone = _customerPhone;}
 
-
+    public int getCust() {
+        System.out.println("Enter Customer ID: ");
+        Scanner scnr = new Scanner(System.in);
+        int input = scnr.nextInt();
+        return input;
+    }
 
 
 

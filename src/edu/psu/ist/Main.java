@@ -86,7 +86,7 @@ public class Main {
                     Customer.printCustomer(cList);
                     break;
 
-                // clean it up
+
                 case ORDER_CODE: //addOrders();
                     // add loop to prompt user to order more items
                     String userInput = "Type 'Y'es to order or type 'N'o to go back to the main menu: ";
@@ -152,6 +152,31 @@ public class Main {
                     break;
                 case TRAN_CODE: //listTransactions();
                     //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
+
+                    /* doesn't work - needs fixing
+                    String input_cust = "Type 'N' to add a new customer or 'E' for an existing customer";
+                    userAction = getAction(input_cust);
+
+                    if (userAction == 'E') {
+
+                        System.out.println(cust.getCustomerName(cust.getCust()) + "Your order total is: $ " + orderTotal);
+
+
+                        System.out.println("Enter Customer ID: ");
+                        Scanner scnr = new Scanner(System.in);
+                        int input = scnr.nextInt();
+                        System.out.println(cust.getCustomerName(input) + "Your order total is: $ " + orderTotal);
+
+
+                    }
+
+                    if (userAction == 'N') {
+                        cList.add(cust.addCustomer());
+                        cust.getCust();
+
+                    }
+                    */
+
                     Transaction trans1 = new Transaction(1);
                     tList.add(trans1);
                     System.out.println("Your order total is: $ " + orderTotal);
@@ -180,6 +205,8 @@ public class Main {
         char firstChar = answer.charAt(0);
         return firstChar;
     }
+
+
 /*
     public Customer addCustomer() {
         Customer cust = new Customer(cCount++);

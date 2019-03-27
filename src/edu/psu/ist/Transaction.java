@@ -78,6 +78,8 @@ public class Transaction {
     public void setPaymentType(PaymentType _payment) {this.payment = _payment;}
 
     public void printReceipt(double _total, PaymentType _payment) {
+
+        System.out.println("Customer Name:         ");
         System.out.printf("%-10s _ %-10s", "Order         ", "$ ");
         System.out.printf("%.2f\n", _total);
 
