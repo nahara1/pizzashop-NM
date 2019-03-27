@@ -205,26 +205,4 @@ public class Main {
         char firstChar = answer.charAt(0);
         return firstChar;
     }
-
-
-/*
-    public Customer addCustomer() {
-        Customer cust = new Customer(cCount++);
-        Scanner scnr = new Scanner(System.in);
-        System.out.println("Please Enter your Name: ");
-        cust.setCustomerName(scnr.nextLine());
-        System.out.println("Please Enter your Phone: ");
-        cust.setCustomerPhone(scnr.nextLine());
-
-
-        return cust;
-    }
-*/
-
-
-
-
 }
-
-
-
