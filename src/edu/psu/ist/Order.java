@@ -10,7 +10,6 @@ Rev: 9
 
 package edu.psu.ist;
 
-import java.io.PrintStream;
 import java.util.*;
 
 
@@ -54,6 +53,10 @@ public class Order {
         quantity = input.nextInt();
         return quantity;
 
+    }
+
+    public void setQuantity(int _qty) {
+        this.quantity = _qty;
     }
 
 

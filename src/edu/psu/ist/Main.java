@@ -116,6 +116,7 @@ public class Main {
                         int menuId = input.nextInt();
                         System.out.println("Enter quantity: ");
                         int qty = or.getQuantity();
+                        or.setQuantity(qty);
 
                         oList.add(or.order());
 
@@ -154,6 +155,8 @@ public class Main {
 
 
                     //print order
+
+                    or.listOrder(oList);
                     break;
                 case TRAN_CODE: //listTransactions();
                     //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
