@@ -62,9 +62,10 @@ public class Order {
 
     }
 
-    public void getSubTo(double subTotal) {
+    public Double getSubTo(double subTotal) {
         System.out.println("$ " + subTotal);
         orderTotal += subTotal;
+        return orderTotal;
     }
 
     //Setters and Getters

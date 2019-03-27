@@ -4,8 +4,8 @@ Purpose Details: Pizza ordering application
 Course: IST 242
 Author: Nahara M.
 Date Developed: 3/13/19
-Last Date Changed: 3/24/19
-Rev: 9
+Last Date Changed: 3/26/19
+Rev: 10
  */
 
 package edu.psu.ist;
@@ -121,22 +121,26 @@ public class Main {
                         switch (menuId) {
                             case 1:
                                 subTotal = or.getSubTotal(menu1.getPrice(1), qty);
-                                or.getSubTo(subTotal);
+                                System.out.println("$ " + subTotal);
+                                orderTotal += subTotal;
                                 userAction = getAction(userInput);
                                 break;
                             case 2:
                                 subTotal = or.getSubTotal(menu2.getPrice(2), qty);
-                                or.getSubTo(subTotal);
+                                System.out.println("$ " + subTotal);
+                                orderTotal += subTotal;
                                 userAction = getAction(userInput);
                                 break;
                             case 3:
                                 subTotal = or.getSubTotal(menu3.getPrice(3), qty);
-                                or.getSubTo(subTotal);
+                                System.out.println("$ " + subTotal);
+                                orderTotal += subTotal;
                                 userAction = getAction(userInput);
                                 break;
                             case 4:
                                 subTotal = or.getSubTotal(menu4.getPrice(4), qty);
-                                or.getSubTo(subTotal);
+                                System.out.println("$ " + subTotal);
+                                orderTotal += subTotal;
                                 userAction = getAction(userInput);
                                 break;
                         }
