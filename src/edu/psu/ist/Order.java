@@ -10,6 +10,7 @@ Rev: 9
 
 package edu.psu.ist;
 
+import java.io.PrintStream;
 import java.util.*;
 
 
@@ -57,8 +58,8 @@ public class Order {
 
 
     public void printOrder(double _subtotal, double _price, int _quantity, String menuItem) {
-
-        System.out.printf("\n" + menuItem, "$ " + _price, " * " +  _quantity, "=" + _subtotal);
+        //PrintStream order = System.out.printf("\n" + menuItem, "$ " + _price, " * " +  _quantity, "=" + _subtotal);
+        System.out.println(menuItem + " $" + _price + " * " +  _quantity + " = " + "$ " + _subtotal);
 
     }
 

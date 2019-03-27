@@ -10,6 +10,7 @@ Rev: 10
 
 package edu.psu.ist;
 import java.util.*;
+import java.io.PrintStream;
 
 
 public class Main {
@@ -121,26 +122,30 @@ public class Main {
                         switch (menuId) {
                             case 1:
                                 subTotal = or.getSubTotal(menu1.getPrice(1), qty);
-                                System.out.println("$ " + subTotal);
+                                //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
+                                or.printOrder(subTotal, menu1.getPrice(1), qty, menu1.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                             case 2:
                                 subTotal = or.getSubTotal(menu2.getPrice(2), qty);
-                                System.out.println("$ " + subTotal);
+                                //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
+                                or.printOrder(subTotal, menu2.getPrice(2), qty, menu1.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                             case 3:
                                 subTotal = or.getSubTotal(menu3.getPrice(3), qty);
-                                System.out.println("$ " + subTotal);
+                                //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
+                                or.printOrder(subTotal, menu3.getPrice(3), qty, menu1.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                             case 4:
                                 subTotal = or.getSubTotal(menu4.getPrice(4), qty);
-                                System.out.println("$ " + subTotal);
+                                //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
+                                or.printOrder(subTotal, menu4.getPrice(4), qty, menu1.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                         }
