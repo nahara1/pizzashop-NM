@@ -95,7 +95,7 @@ public class Transaction {
 
         System.out.printf("%.2f\n", total);
 
-        System.out.printf("%-10s _ %-10s\n", "Payment type  ", "    ", _payment);
+        //System.out.printf("%-10s _ %-10s\n", "Payment type  ", "    ", _payment);
 
     }
 /*

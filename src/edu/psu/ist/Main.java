@@ -132,21 +132,21 @@ public class Main {
                                 subTotal = or.getSubTotal(menu2.getPrice(2), qty);
                                 //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
-                                or.printOrder(subTotal, menu2.getPrice(2), qty, menu1.getmenuItem());
+                                or.printOrder(subTotal, menu2.getPrice(2), qty, menu2.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                             case 3:
                                 subTotal = or.getSubTotal(menu3.getPrice(3), qty);
                                 //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
-                                or.printOrder(subTotal, menu3.getPrice(3), qty, menu1.getmenuItem());
+                                or.printOrder(subTotal, menu3.getPrice(3), qty, menu3.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                             case 4:
                                 subTotal = or.getSubTotal(menu4.getPrice(4), qty);
                                 //System.out.println("$ " + subTotal);
                                 orderTotal += subTotal;
-                                or.printOrder(subTotal, menu4.getPrice(4), qty, menu1.getmenuItem());
+                                or.printOrder(subTotal, menu4.getPrice(4), qty, menu4.getmenuItem());
                                 userAction = getAction(userInput);
                                 break;
                         }
