@@ -10,7 +10,7 @@ Rev: 10
 
 package edu.psu.ist;
 import java.util.*;
-import java.io.PrintStream;
+
 
 
 public class Main {
@@ -156,7 +156,7 @@ public class Main {
 
                     //print order
 
-                    or.listOrder(oList);
+                    //or.listOrder(oList);
                     break;
                 case TRAN_CODE: //listTransactions();
                     //                 System.out.println("Enter payment type: " + trans1.setPaymentType());
